@@ -7,17 +7,71 @@
 body{
     background-color: black;
 }
+/* global starts here  */
+
+.container{
+    max-width: 1180px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex{
+    display: grid;
+    justify-content: space-between;
+
+}
+
+/* global ends here  */
+
+.faq{
+    background-color: gray;
+    position: relative;
+    background-color: red;
 
 
+}
+.faqQ{
+   display: flex;
+   justify-content: space-between;
+    background-color: blue;
+    padding: 30px;
+}
+.faqA{
+    background-color: brown;
+    padding: 30px;
+
+
+}
 .actionIcon{
     background-color: red;
+    position: relative;
+    /* width: 20%; */
+
+
 }
 
 .actionIcon span{
     display: block;
-    width: 50px;
+    width: 30px;
     height: 3px;
-    margin: 50px;
-    background-color: green;
 
+    background-color: cyan;
+
+
+}
+.actionIcon #horizontal{
+    position: absolute;
+    /* background-color: yellow; */
+    /* padding: 5px; */
+    transform: rotate(90deg);
+    top: 50%;
+    right: 50%;
+}
+.actionIcon #vertical{
+    position: absolute;
+    /* background-color: yellow; */
+    /* padding: 5px; */
+    /* transform: rotate(90deg); */
+    top: 50%;
+    right: 50%;
 }
