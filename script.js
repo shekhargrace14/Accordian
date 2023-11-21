@@ -10,14 +10,16 @@ actionIcon.addEventListener("click", function(){
 
         horizontal.style.transform = " rotate(135deg)" ;
         vertical.style.transform = " rotate(50deg)" ;
-        // horizontal.style.backgroundColor = "red" ;
+        horizontal.style.backgroundColor = "red" ;
         flag = 1;
-        // faqA.classList.add("hide")
+        faqA.classList.add("hide")
     }else{
         horizontal.style.transform = " rotate(90deg)" 
         vertical.style.transform = " rotate(0)" 
         flag=0
-        // faqA.classList.remove("hide")
+        faqA.classList.remove("hide")
 
     }
 })   
+
+

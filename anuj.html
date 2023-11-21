@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        
+        .accordian{
+            width: 100%;
+            background-color: gray;                              
+            padding: 8px 16px;
+            box-shadow: 1px 1px 5px white;
+            border-radius:4px ;
+            margin-bottom: 16px;
+            color: #000;
+            cursor: pointer;
+        }
+        .accordian .question{
+            display: flex;
+            justify-content: space-between;
+            padding: 16px;
+        }
+
+
+
+        .accordian .icon{
+            /* background-color: red; */
+            font-size: 30px;
+            transition: transform  0.2s;
+        
+        }
+
+        .accordian .icon.active{
+            transform: rotate(-180deg);
+        }
+        .accordian .answer{
+        
+            max-height: 0;
+            overflow: hidden;
+            /* background-color: black; */
+            transition: max-height  0.2s;    
+
+    }
+
+    </style>
+
+    <script src="https://kit.fontawesome.com/2b90b5a66a.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="column">
+                <ul>
+                    <a href="./index.html"><li>Home</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class=" accordian">
+            <div class="question">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ex?</h4>
+                <i class="icon fas fa-caret-down"></i>  
+            </div>
+            <div class="answer ">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ratione non sit. Unde repellendus nostrum fugiat ea expedita reiciendis minus vel? Voluptatibus officiis omnis beatae!</p>
+            </div>
+        </div>
+
+        <div class=" accordian">
+            <div class="question">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ex?</h4>
+                <i class="icon fas fa-caret-down "></i>  
+            </div>
+            <div class="answer">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ratione non sit. Unde repellendus nostrum fugiat ea expedita reiciendis minus vel? Voluptatibus officiis omnis beatae! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, commodi? Quos eos asperiores suscipit! Sunt ipsam, maxime possimus quibusdam velit eum, quae repudiandae perspiciatis unde ducimus nam doloribus esse nobis dolor voluptatum consequuntur similique facere deleniti quam exercitationem? Fugit temporibus cupiditate ipsam voluptates odio ipsa tempora minus quibusdam illum optio?</p>
+            </div>
+        </div>
+
+        <div class=" accordian">
+            <div class="question">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ex?</h4>
+                <i class="icon fas fa-caret-down"></i>  
+            </div>
+            <div class="answer">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ratione non sit. Unde repellendus nostrum fugiat ea expedita reiciendis minus vel? Voluptatibus officiis omnis beatae!</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const accordians = document.querySelectorAll('.accordian');
+
+            accordians.forEach(accordian=>{
+                const icon = accordian.querySelector('.icon');
+                const answer = accordian.querySelector('.answer');
+                accordian.addEventListener('click', ()=>{
+                
+                    if(icon.classList.contains('active')){
+                        icon.classList.remove('active');
+                        answer.style.maxHeight = null;
+                    }else{
+                        icon.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight +"px" ;
+                    }
+                
+                })
+            })
+    </script>    
+</body>
+</html>
