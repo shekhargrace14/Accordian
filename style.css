@@ -6,6 +6,7 @@
 }
 body{
     background-color: black;
+    line-height: 1.6rem;
 }
 /* global starts here  */
 
@@ -22,35 +23,35 @@ body{
 }
 
 /* global ends here  */
-
+/* 
 .faq{
     background-color: gray;
-    position: relative;
+    /* position: relative; 
     background-color: green;
     z-index: 99;
     padding: 20px;
 
 
-}
-.faqQ{
+} */
+/* .faqQ{
    display: flex;
    justify-content: space-between;
     background-color: blue;
     padding: 30px;
     z-index: 999;
-    position: absolute;
+    /* position: absolute;
     width: 100%;
-}
+} */
 
-.actionIcon{
+/* .actionIcon{
     background-color: red;
     position: relative;
     /* width: 20%; */
 
 
-}
 
-.actionIcon span{
+
+/* .actionIcon span{
     display: block;
     width: 30px;
     height: 3px;
@@ -58,38 +59,55 @@ body{
     background-color: cyan;
 
 
-}
-.actionIcon #horizontal{
+} */
+/* .actionIcon #horizontal{
     position: absolute;
     /* background-color: yellow; */
-    /* padding: 5px; */
+    /* padding: 5px; 
     transition: all ease-in-out 300ms;
     transform: rotate(90deg);
     top: 50%;
     right: 50%;
-}
-.actionIcon #vertical{
+} */
+/* .actionIcon #vertical{
     position: absolute;
     /* background-color: yellow; */
     /* padding: 5px; */
-    /* transform: rotate(90deg); */
+    /* transform: rotate(90deg); 
     transition: all ease-in-out 300ms;
 
     top: 50%;
     right: 50%;
-}
-.faqA{
+} */
+/* .faqA{
     background-color: brown;
     padding: 30px;
+    top: 0;
+    position: absolute;
+    z-index : 1;
+} */
 
+/* .hide{
+    top: 10rem;
 
+} */
 
-
+.accordian{
+    width: 100%;
+    background-color: gray;                              
+    padding: 8px 16px;
+    box-shadow: 1px 1px 5px white;
+    border-radius:4px ;
+    margin-bottom: 16px;
+    color: #000;
+}
+.accordian .question{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
 }
 
-.hide{
-    position: absolute;
-    top: 10rem;
-    z-index: 1;
+.accordian .answer{
+    padding: 16px;
 
 }
