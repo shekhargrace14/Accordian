@@ -5,37 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        .flex{
+            display: flex;
+            justify-content: space-between;
+        }
+        .accordian{
+            font-family: arial;
+            width: 450px;
+            /* border: 1px solid #fff; */
+        }
+        .accordian-item{
+            margin-bottom: 10px;
+        }
+        .accordian-title{
+            color: #fff;
+            background-color: #dc2b2b;
+            transition: background 1s;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .accordian-title:hover{
+            background: #9a1616;
+        }
+        .accordian-content{
+            
+            background: #072379;
+            padding: 10px;
+            display: none;
+        }
+
+        .accordian-item.active .accordian-content{
+            display: block;
+        }
+
+        #cross{
+            /* background-color: greenyellow; */
+        }
+        #cross span{
+            background-color: white;
+            width: 25px;
+            height: 2px;
+            display: block;
+            margin: 8px;
+   
+        }
+
+    </style>
 </head>
 <body>
-    <div class="accordian">
-        <div class="accordian-item">
-            <div class="accordian-title">accordian title 1</div>
-            <div class="accordian-content">
-                <p> accordian content 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
-            </div>
-        </div>
-
-        <div class="accordian-item">
-            <div class="accordian-title">accordian title 2</div>
-            <div class="accordian-content">
-                <p>accordian content 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
-            </div>
-        </div>
-
-        <div class="accordian-item">
-            <div class="accordian-title">accordian title 3</div>
-            <div class="accordian-content">
-                <p>accordian content 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
-            </div>
-        </div>
-
-        <div class="accordian-item">
-            <div class="accordian-title">accordian title 4</div>
-            <div class="accordian-content">
-                <p> accordian content 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
+    <div class="container">
+        <div class="row ">
+            <div class="column">
+                <ul>
+                    <a href="./index.html"><li>Home</li></a>
+                </ul>
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="row ">
+            <div class="column">
+                <div class="accordian">
+                    <div class="accordian-item">
+                        <div class="accordian-title flex">
+                            <p>accordian title 1</p>
+                            <!-- <div id="cross">
+                                <span id="vertical"></span>
+                                <span id="horizontal"></span>
+                            </div> -->
+                        </div>
+                        <div class="accordian-content">
+                            <p> accordian content 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
+                        </div>
+                    </div>
+            
+                    <div class="accordian-item">
+                        <div class="accordian-title">accordian title 2</div>
+                        <div class="accordian-content">
+                            <p>accordian content 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
+                        </div>
+                    </div>
+            
+                    <div class="accordian-item">
+                        <div class="accordian-title">accordian title 3</div>
+                        <div class="accordian-content">
+                            <p>accordian content 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
+                        </div>
+                    </div>
+            
+                    <div class="accordian-item">
+                        <div class="accordian-title">accordian title 4</div>
+                        <div class="accordian-content">
+                            <p> accordian content 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
     
+    
+    <script>
+        let accordianItems = document.querySelectorAll(".accordian-item");
+                
+        accordianItems.forEach(item => {
+            const title = item.querySelector(".accordian-title");
+            const content = item.querySelector(".accordian-content");
+
+            title.addEventListener('click', ()=>{
+                for (var i = 0; i < accordianItems.length; i++){
+                    if(accordianItems[i] != item){
+                        accordianItems[i].classList.remove('active');
+                    }else{
+                        item.classList.toggle('active');
+                    }
+
+                }
+
+            })
+        })
+
+
+    </script>
+
 </body>
 </html>
