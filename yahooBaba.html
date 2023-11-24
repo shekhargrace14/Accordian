@@ -10,32 +10,32 @@
             display: flex;
             justify-content: space-between;
         }
-        .accordian{
+        .accordion{
             font-family: arial;
             width: 450px;
             /* border: 1px solid #fff; */
         }
-        .accordian-item{
+        .accordion-item{
             margin-bottom: 10px;
         }
-        .accordian-title{
+        .accordion-title{
             color: #fff;
             background-color: #dc2b2b;
             transition: background 1s;
             cursor: pointer;
             padding: 10px;
         }
-        .accordian-title:hover{
+        .accordion-title:hover{
             background: #9a1616;
         }
-        .accordian-content{
+        .accordion-content{
             
             background: #072379;
             padding: 10px;
             display: none;
         }
 
-        .accordian-item.active .accordian-content{
+        .accordion-item.active .accordion-content{
             display: block;
         }
 
@@ -67,38 +67,39 @@
     <div class="container">
         <div class="row ">
             <div class="column">
-                <div class="accordian">
-                    <div class="accordian-item">
-                        <div class="accordian-title flex">
-                            <p>accordian title 1</p>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-title flex">
+                            <p>accordion title 1</p>
                             <!-- <div id="cross">
                                 <span id="vertical"></span>
                                 <span id="horizontal"></span>
                             </div> -->
                         </div>
-                        <div class="accordian-content">
-                            <p> accordian content 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
+                        <div class="accordion-content">
+                            <p> accordion content 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
                         </div>
                     </div>
             
-                    <div class="accordian-item">
-                        <div class="accordian-title">accordian title 2</div>
-                        <div class="accordian-content">
-                            <p>accordian content 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
+                    <div class="accordion-item">
+                        <div class="accordion-title">accordion title 2</div>
+                        <div class="accordion-content">
+                            <p>accordion content 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
                         </div>
                     </div>
             
-                    <div class="accordian-item">
-                        <div class="accordian-title">accordian title 3</div>
-                        <div class="accordian-content">
-                            <p>accordian content 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
+                    <div class="accordion-item">
+                        <div class="accordion-title">accordion title 3</div>
+                        <div class="accordion-content">
+                            <p>accordion content 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
                         </div>
                     </div>
             
-                    <div class="accordian-item">
-                        <div class="accordian-title">accordian title 4</div>
-                        <div class="accordian-content">
-                            <p> accordian content 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
+                    <div class="accordion-item">
+                        <div class="accordion-title">accordion title 4</div>
+                        <div class="accordion-content">
+                            <p> accordion content 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quo reiciendis? Ex eius quas est, quaerat animi iste ab ad qui repellat commodi laboriosam molestias pariatur quam, quae vel aspernatur tempora doloribus eos maiores quisquam.</p>
                         </div>
                     </div>
             
@@ -110,17 +111,17 @@
     
     
     <script>
-        let accordianItems = document.querySelectorAll(".accordian-item");
+        let accordionItems = document.querySelectorAll(".accordion-item");
                 
-        accordianItems.forEach(item => {
+        accordionItems.forEach(item => {
             console.log("hello  "   )   
-            const title = item.querySelector(".accordian-title");
-            const content = item.querySelector(".accordian-content");
+            const title = item.querySelector(".accordion-title");
+            const content = item.querySelector(".accordion-content");
 
             title.addEventListener('click', ()=>{
-                for (var i = 0; i < accordianItems.length; i++){
-                    if(accordianItems[i] != item){
-                        accordianItems[i].classList.remove('active');
+                for (var i = 0; i < accordionItems.length; i++){
+                    if(accordionItems[i] != item){
+                        accordionItems[i].classList.remove('active');
                     }else{
                         item.classList.toggle('active');
                     }

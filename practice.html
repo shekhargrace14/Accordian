@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .accordions{
+            width: 80%;
+            margin: 0 auto ;
+            
+
+        }
+        .accordionItem {
+            margin-bottom: 16px;
+        }
+        .accordionItem .title{
+            background-color: red;
+            padding: 8px 16px;
+        }
+        .accordionItem .answer{
+            background-color: blue;
+            padding: 8px 16px;
+            display: none;
+        }
+        .accordionItem.active .answer{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="column">
+                <ul>
+                    <a href="./index.html"><li>Home</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="accordions">
+        <div class="accordionItem">
+            <div class="title">title 1</div>
+            <div class="answer">answer 2</div>
+        </div>
+
+        <div class="accordionItem">
+            <div class="title">title 1</div>
+            <div class="answer">answer 2</div>
+        </div>
+
+        <div class="accordionItem">
+            <div class="title">title 1</div>
+            <div class="answer">answer 2</div>
+        </div>
+
+        <div class="accordionItem">
+            <div class="title">title 1</div>
+            <div class="answer">answer 2</div>
+        </div>
+    </div>
+    <script>
+        const accordionItem = document.querySelectorAll(".accordionItem")
+            accordionItem.forEach(function(item) {
+                const title = document.querySelector(".title");
+                const answer = document.querySelector("answer");
+                
+                title.addEventListener("click",function(){
+                    for(var i = 0; i < accordionItem.length; i++){
+                        if(accordionItem[i] != item){
+                            accordionItem[i].classList.remove('active');
+                        }else{
+                            item.classList.toggle('active');
+                        }
+                    }
+                })
+
+            });
+    </script>
+
+    <!-- <script src="./app.js"></script> -->
+
+</body>
+</html>
