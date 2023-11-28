@@ -65,15 +65,18 @@
             background-color: brown;
             padding: 30px;
             top: 0;
-            position: absolute;
+            /* position: absolute; */
             z-index : 1;
         } */
 
         .hide{
             top: 10rem;
+            background-color: red;
+            padding: 50px;
+            display: none !important;
         
         }
-
+        
     </style>
 </head>
 <body>
@@ -105,5 +108,15 @@
         </div>
         
     </div>
+    <script>
+        let actionIcon = document.querySelector(".actionIcon")
+        let horizontal = document.querySelector("#horizontal")
+        let vertical = document.querySelector("#vertical")
+
+        actionIcon.addEventListener("click", function(){
+            console.log("Hello")
+            horizontal.classList.toggle("hide");
+        })
+    </script>
 </body>
 </html>
